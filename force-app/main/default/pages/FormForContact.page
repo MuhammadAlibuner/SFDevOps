@@ -1,0 +1,37 @@
+<apex:page standardController="Contact" extensions="ExtenOnUserCheckin" docType="html-5.0">
+
+<!-- css styles for the page -->
+<!--<apex:stylesheet value="{!$Resource.CustomCSS}" /> -->
+
+<!-- header -->
+<!--<apex:image styleClass="covid_app_logo" value="{!$Resource.CovidAppLogo}" /> -->
+<h1>Covid19 registration app</h1>
+
+<!-- form for registering a new user -->
+     
+<apex:form >
+    <apex:pageBlock title="Please enter your details below:">
+       
+        <P style="color:green;font-size:16px;"> {! SuccessMessage} </P>
+       <P style="color:red;font-size:16px;"> {!FirstnameError} </P>
+        <P style="color:red;font-size:16px;"> {!LastNameError} </P>
+         <P style="color:red;font-size:16px;"> {!DateError} </P>
+        <apex:pageBlockSection columns="1">
+            <!--<apex:inputField value="{! Contact.FirstName }" required="true"/>
+            <apex:inputField value="{! Contact.LastName }" required="true"/>
+            <apex:inputField value="{! Contact.Date_of_checkin__c }" required="true"/> -->
+           
+            Input First Name <apex:inputText value="{!firstName}"/> 
+            Input Last Name <apex:inputText value="{!LastName}"/>
+            Input Date :<apex:input type="date" value="{!Sdate}" required="true" />
+            <apex:commandButton value="save" action="{!saveForm}"/>
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+</apex:form>
+
+<!-- link to the check-in VF page -->
+<p>To see the list of all checked-in users please use the following link:</p>
+<apex:outputLink value="https://2mn035-dev-ed--c.visualforce.com/apex/ListOfCheckedInUsers" id="theLink">
+User list
+</apex:outputLink>
+</apex:page>

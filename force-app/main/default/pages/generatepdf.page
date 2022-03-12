@@ -1,0 +1,125 @@
+<apex:page standardController="Contact" extensions="staging_class" action="{! updateRec}"  standardStylesheets="false" applyBodyTag="false" renderAs="PDF" applyHtmlTag="false" showHeader="false"  >
+       
+    <html>
+        <head> 
+            <title>PDF Generator</title>
+            <apex:stylesheet value="https://wnwsolutions.com/inf4mationltd.css"/>
+            <style>
+                @page{
+                 size: a3 landscape;
+                 margin:0%;
+                }
+                
+                body{
+                margin: 0px;
+                padding: 0px;
+                background-image: url('{!URLFOR($Resource.pdfcss, 'csspdf/cert.jpg')}');
+                background-size: cover;
+                background-repeat:no-repeat;
+                background-position:center;
+                
+                }
+                .outTableClass{
+                width:1000px;
+                height:1000px !important;
+                border: 0px solid white;
+                background-repeat: no-repeat;
+                padding: 0px;
+                }
+                .innerClass{
+                width: 1000px;
+                border: 0px solid white;
+                }
+                .tdClass{
+                height: 107px;
+                text-align: center;
+                vertical-align:bottom;
+                font-family: "sans-serif", Times, serif !important;
+                overflow:hidden;
+                }
+                
+                .ContactName{
+                height: 180px;
+                text-align: center;
+                vertical-align: bottom;
+                font-family: "sans-serif", Times, serif !important;
+                font-weight:500;
+                font-size:31px;
+                color:#000000;
+                }
+                .para{
+                height: 180px;
+                text-align: center;
+                vertical-align: bottom;
+                font-family: "sans-serif", Times, serif !important;
+                font-weight:bold;
+                font-size:20px;
+                color:#000;
+                }
+                .CreateDateClass{
+                height: 100px;
+                text-align: center;
+                vertical-align: bottom;
+                font-family: "sans-serif", Times, serif !important;
+                }
+                .comOrg{
+                height: 50px;
+                text-align: center;
+                vertical-align: bottom;
+                font-family: "sans-serif", Times, serif !important;
+                font-weight:600;
+                font-size:31px;
+                color:black;
+                }
+                .poweredbyClass{
+                font-size:12px;
+                height: 100px;
+                }
+                
+            </style>
+        </head>
+        <body>
+          
+            <table class="outTableClass" align="center">
+                <tr>
+                    <td valign="top">
+                        <table class="innerClass" align="center">
+                            <tr>
+                                <td style="text-align: center;"><h1 style="padding-top: 156px;font-family: 'sans-serif', Times, serif !important;font-size:39px;"> Snifty.io </h1></td>
+                            </tr>
+                            <tr>
+                                <td class="para"><h2>This NFT ownership certificate is issued in the name of</h2></td>
+                            </tr>
+                            <tr>
+                                <td class="ContactName"><h2> {!accRec.Name}</h2></td>
+                            </tr>
+                            <tr>
+                                <td class="tdClass" align="center" ><h2 style="font-weight:400;color:black;   align:center"><apex:outputText value="https://www.google.com" escape="false" /></h2></td>
+                            </tr>
+                            <tr>
+                                <td class="tdClass" ><h2 style="font-weight:400;color:black;"> Certificate Number:   {!$organization.id}{!accRec.Id} </h2></td>
+                            </tr>
+                            <tr>
+                                <td class="comOrg">Issued By: {!$organization.name} </td>
+                            </tr>
+                            <tr>
+                                <td class="CreateDateClass">
+                                    <h2 style="font-weight:400;color:black;">
+                                        Date: <apex:outputText value="{0,date, dd MMM yyyy hh:ss}">
+                                        <apex:param value="{! accRec.CreatedDate }" /> 
+                                        </apex:outputText>
+                                    </h2></td>
+                            </tr>
+                            <tr>
+                                <td class="poweredbyClass" align='right'>
+                                    <h2 style="font-weight:400;color:black;">Powered by iNf4mation.com</h2></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+            
+          
+        </body>
+    </html>
+</apex:page>

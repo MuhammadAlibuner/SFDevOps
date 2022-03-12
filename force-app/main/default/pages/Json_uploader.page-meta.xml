@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApexPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>53.0</apiVersion>
+    <availableInTouch>false</availableInTouch>
+    <confirmationTokenRequired>false</confirmationTokenRequired>
+    <label>Json_uploader</label>
+    <packageVersions>
+        <majorNumber>3</majorNumber>
+        <minorNumber>9</minorNumber>
+        <namespace>LID</namespace>
+    </packageVersions>
+    <packageVersions>
+        <majorNumber>3</majorNumber>
+        <minorNumber>75</minorNumber>
+        <namespace>box</namespace>
+    </packageVersions>
+    <packageVersions>
+        <majorNumber>1</majorNumber>
+        <minorNumber>51</minorNumber>
+        <namespace>pandadoc</namespace>
+    </packageVersions>
+    <packageVersions>
+        <majorNumber>1</majorNumber>
+        <minorNumber>7</minorNumber>
+        <namespace>sf_com_apps</namespace>
+    </packageVersions>
+    <packageVersions>
+        <majorNumber>3</majorNumber>
+        <minorNumber>7</minorNumber>
+        <namespace>trailheadapp</namespace>
+    </packageVersions>
+</ApexPage>

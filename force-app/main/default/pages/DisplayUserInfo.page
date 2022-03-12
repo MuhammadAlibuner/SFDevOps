@@ -1,0 +1,8 @@
+<apex:page >
+    <apex:pageBlock title="trailhead task page block">
+        <apex:pageBlockSection >
+        	{!$User.FirstName}
+            
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+</apex:page>

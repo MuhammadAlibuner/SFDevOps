@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Property_change__c</fullName>
+    <externalId>false</externalId>
+    <label>Property_change</label>
+    <referenceTo>Property_change__c</referenceTo>
+    <relationshipLabel>Favorites_change</relationshipLabel>
+    <relationshipName>Favorites</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

@@ -1,0 +1,6 @@
+<apex:page controller="TrainingPageController">
+    <h1>
+        {!lstWrap}
+    </h1>
+   
+</apex:page>
